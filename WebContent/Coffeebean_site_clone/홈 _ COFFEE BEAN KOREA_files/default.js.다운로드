@@ -1,0 +1,438 @@
+﻿
+
+(function(ssq){
+	var	struc={}, config={}, listener={};
+	var  _mainImgs , mainListSub;
+	ssq(document).ready(function(){ struc.init() });
+	function trace(a){ var b=""; for(var i=0;i<arguments.length;i++){if(i>0)b+=", ";b+=arguments[i];} try{console.log(b);}catch(e){}}
+	struc = {
+		init : function() {
+			struc.regist(); 
+			struc.pageMethod();
+			listener.start();
+		},
+		regist : function() {
+
+		},
+		pageMethod : function () {
+			skipNavigation();
+			createDesktopGnb();
+			createMobileGnb();
+			desktopSearch();
+			gnbSlide();	
+			//btnGnbFix();
+			btnTop2();
+			activeHeaderMember();
+			familySiteOpen();
+		}
+	};
+	listener = {
+		start : function(){
+			ssq(window).bind("resize", listener.resizePage); listener.resizePage();
+			ssq("a.scroll_buttom").on("click", function(e){ e.preventDefault(); goScroll(ssq(this).attr("href")); });
+			ssq("a[href=#]").on("click",function(e){
+				e.preventDefault();
+			})
+		},
+		resizePage : function(e) {
+		}
+	};
+	function skipNavigation(){
+		ssq("#skipNavi > li > a").click(function(){
+			ssq(ssq(this).attr("href"))
+			.attr("tabindex","0")
+			.css("outline","0")
+			.focus();
+		});
+	} 
+	
+	function createDesktopGnb(){
+		jQuery('#gnb > ul > li').mouseenter(function(){		
+			jQuery(this).children('a').addClass('on');
+			jQuery(this).children('.depth2:not(:animated)').fadeIn(500);	
+		});
+		jQuery('#gnb > ul > li').mouseleave(function(){
+			jQuery('#gnb > ul > li > a').removeClass('on');
+			jQuery('.depth2').stop().hide();
+		});
+		jQuery('#gnb > ul  li').focusin(function(){		
+			jQuery(this).children('.depth2').show();	
+		});
+		jQuery('.depth2 div:last-child').focusout(function(){
+			jQuery('.depth2').stop().hide();	
+		});
+		/*
+		jQuery('#gnb > ul > li').keydown(function(){		
+			jQuery(this).children('.depth2:not(:animated)').fadeIn(500);	
+		});
+		jQuery('#gnb > ul > li').focusout(function(){
+			jQuery('.depth2').hide();
+		});
+		*/
+	}
+	function desktopSearch(){
+		var searchBox = jQuery('.inner_header .search_box');
+		jQuery('#btnSearch').click(function(){
+			jQuery('#btnSearch').toggleClass('on');
+			searchBox.slideToggle();
+		})
+	}
+
+	function createMobileGnb() {
+		var moveNum = jQuery('.gnb_m').css('width');
+
+		jQuery('.gnb_m').css('left','-'+moveNum);	
+		jQuery('.gnb_m .depth2').css('left','-'+moveNum);
+		/*GNB ON*/
+		jQuery('.btn_menu').click(function(e){
+			jQuery('body').removeClass('is_open_member').addClass('gnb_on');
+			jQuery('#wrap').addClass('on').animate({left:moveNum},200);
+			jQuery('.gnb_m:not(:animated)').animate({left:'0px'},200).show();
+			jQuery('.bg_wrap').show();
+			return false;
+		});
+
+		/*DEPTH2 ON*/
+		jQuery('.gnb_m > ul > .depth1 > a').click(function(e){
+			jQuery('.gnb_m').css('overflow-y', 'hidden');
+			jQuery(this).next('.depth2:not(:animated)').animate({left:'0px'},200).show();
+			return false;
+		});
+
+		/*DEPTH2 CLOSE*/
+		jQuery('.gnb_m .depth2 .btn_close').click(function(e){
+			jQuery('.gnb_m').css('overflow-y', 'scroll');
+			jQuery('.gnb_m .depth2:not(:animated)').animate({left:'-'+moveNum},200);
+			return false;
+		});
+
+		/*DEPTH3 ON/OFF*/
+		jQuery('.gnb_m .depth2 > ul > li > a').click(function(e){		
+			if(jQuery(this).hasClass('on') == false){
+				jQuery('.gnb_m .depth2 > ul > li > a').removeClass('on').children().children('span').removeClass('on');
+				jQuery(this).addClass('on').children().children('span').addClass('on');
+				jQuery('.gnb_m .depth3').slideUp();
+				jQuery(this).next('.depth3:not(:animated)').slideDown();
+			} else {
+				jQuery('.gnb_m .depth2 > ul > li > a').removeClass('on');
+				jQuery('.gnb_m .depth2 > ul > li > a > div > span').removeClass('on');
+				jQuery(this).next('.depth3').slideUp();		
+			}			
+		});		
+		
+		/*GNB OFF*/
+		jQuery('.bg_wrap').click(function(e){
+			jQuery('#wrap').animate({left:0},200,function(e){
+				jQuery('#wrap').removeClass('on');
+				jQuery('body').removeClass('gnb_on');
+			});
+			jQuery('.gnb_m .depth2:not(:animated)').animate({left:'-'+moveNum},200);
+			jQuery('.gnb_m:not(:animated)').animate({left:'-'+moveNum},200);
+			jQuery('.gnb_m').css('overflow-y', 'scroll');
+			jQuery('.gnb_m .depth2 > ul > li > a').removeClass('on').children('span').removeClass('on');
+			jQuery('.gnb_m .depth3').slideUp();
+			jQuery('.bg_wrap').hide();
+			return false;	
+		});
+
+	}
+
+	function gnbSlide(){
+		jQuery('.gnb_slide').slick({
+			infinite: true,
+			dots: false,
+			fade: true,
+			speed: 1000,
+			slidesToShow: 1
+		});
+	}
+
+	function btnGnbFix(){
+		
+		var headerHeight = jQuery('#header').height();
+		if(jQuery(document).width() >= 1200){
+			jQuery('.btn_gnb').hide();
+			
+			jQuery(function(){			
+				
+				jQuery(window).scroll(function(){
+					if(jQuery(this).scrollTop() > 140){		
+						jQuery('.btn_gnb').fadeIn(500);
+						jQuery('#header').slideUp();
+						jQuery('#btnSearch').removeClass('on');
+						jQuery('.inner_header .search_box').slideUp();
+					} else {
+						jQuery('#header').removeClass('header_fix').show();
+						jQuery('.btn_gnb').css('top','30px').hide();
+					}				
+				});			
+				
+				jQuery('.btn_gnb').click(function(){
+					jQuery('.btn_gnb').hide();	
+					jQuery('#header').addClass('header_fix').slideDown();
+				});
+			});
+
+		}
+
+	}
+	function activeHeaderMember() {
+		var body = ssq('body');
+		var btnActive = ssq('#btnHeaderMember');
+			btnActive.on('click', function(){
+			body.toggleClass('is_open_member');
+			if(body.hasClass('is_open_member')){
+				//dataFrame.location.href = "/main/is_open_member.asp?type=1"
+			}else{
+				//dataFrame.location.href = "/main/is_open_member.asp?type=0"
+			}
+		});
+	}
+	function btnTop2() {
+		// hide #back-top first
+		jQuery("#backTop2").hide();
+		
+		// fade in #back-top
+		jQuery(function () {
+			jQuery(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					jQuery('#backTop2').fadeIn();
+				} else {
+					jQuery('#backTop2').fadeOut();
+				}
+			});
+
+			// scroll body to 0px on click
+			jQuery('#backTop2 a').click(function () {
+				
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	}
+	function btnTop(){
+		jQuery('.btn_top').click(function () {
+			jQuery('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	}
+
+// familySiteOpen
+	function familySiteOpen(){
+		var btnFamily = jQuery('.btn-family');
+		var btnFamilyClose = jQuery('.family-box--top a');		
+		var winW = jQuery(window).width();
+
+		
+		btnFamily.on('click', function(e){
+			jQuery('.f-familysite').toggleClass('open');
+
+			return false;
+		});
+		
+		btnFamilyClose.on('click', function(e){
+			jQuery('.f-familysite').removeClass('open');
+
+			return false;
+		});
+	}
+
+
+	
+})(jQuery);
+
+function showdiv(targetEl, uniqid) {
+if(document.getElementById(targetEl)) 
+	document.getElementById(targetEl).style.display="block";
+}
+function hidediv(targetEl) {
+	if(document.getElementById(targetEl)) 
+		document.getElementById(targetEl).style.display="none";
+}
+
+
+var processImg = new Image();
+processImg.src = "/images/waiting.gif";
+var lang;
+
+function changeToProcess(){
+	var imgLang = "";
+	if (lang == "ja"){
+	imgLang = "ja/";
+	}
+					
+	if (document.all){
+		document.all['checkoutbtn'].innerHTML = "<img src='"+processImg.src+"' name='overItems' id='overItems' border='0'>";
+	} else if (document.layers){
+		document.layers['checkoutbtn'].innerHTML = "<img src='"+processImg.src+"' name='overItems' id='overItems' border='0'>";
+	} else if (document.getElementById){
+		document.getElementById('checkoutbtn').innerHTML = "<img src='"+processImg.src+"' name='overItems' id='overItems' border='0'>";
+	}
+}
+
+function changeToLoading(){
+	if (document.all){
+		document.all['loading'].innerHTML = "<div style='text-align: center;'><img name='overItems' id='overItems' src='http://www.coffeebeankorea.com/images/waiting.gif' border='0'></div>";
+	} else if (document.layers){
+		document.layers['loading'].innerHTML = "<div style='text-align: center;'><img name='overItems' id='overItems' src='http://www.coffeebeankorea.com/images/waiting.gif' border='0'></div>";
+	} else if (document.getElementById){
+		document.getElementById('loading').innerHTML = "<div style='text-align: center;'><img name='overItems' id='overItems' src='http://www.coffeebeankorea.com/images/waiting.gif' border='0'></div>";
+	}
+}
+
+function searchRun() {
+	var gnbFormObj = document.searchForm;
+	var FormObj = document.searchFormReal;
+	
+	if(gnbFormObj.searchItem.value=="" || gnbFormObj.searchItem.value=="검색") {
+		alert("검색어를 입력하세요");
+		gnbFormObj.searchItem.value = "";
+		gnbFormObj.searchItem.focus();
+		return;
+	}
+	else {
+		tempItem = escape(gnbFormObj.searchItem.value);
+		if (tempItem == "검색") { 
+			tempItem = "";
+			gnbFormObj.searchItem.value = "";
+		}		
+		else { 
+			FormObj.sWord.value = gnbFormObj.searchItem.value;
+			FormObj.submit();		
+		}		
+	}
+}
+
+function searchRun2() {
+	var gnbFormObj = document.searchForm2;
+	var FormObj = document.searchFormReal;	
+
+	if(gnbFormObj.searchItem.value=="" || gnbFormObj.searchItem.value == "검색어를 입력하세요") {
+		alert("검색어를 입력하세요");
+		gnbFormObj.searchItem.value = "";
+		gnbFormObj.searchItem.focus();
+		return;
+	}
+	else {
+		tempItem = escape(gnbFormObj.searchItem.value);
+		if (tempItem == "검색어를 입력하세요") { 
+			tempItem = "";
+			gnbFormObj.searchItem.value = "";
+		}
+		else { 
+			FormObj.sWord.value = gnbFormObj.searchItem.value;
+			FormObj.submit();		
+		}				
+	}
+}
+
+// 소셜댓글 값리턴
+function commentResult(a, b, c, d) {
+
+    var rtnVal = false;
+
+	var imgName = "";
+	var shareList = "";
+	if ( a == "insert")	{
+		imgName = d.imageName;
+		shareList = d.shareList
+	}
+
+    jQuery.ajax({
+
+        url: "/ext/comment_action.asp",
+        type: "post",
+        data: {
+            action : a,
+            result: b,
+            object : c,
+            contentNo : jQuery("#EventNo").val(),
+						imgName : imgName,
+						shareList : shareList
+//		      contentCategory : contentCategory
+        },
+        success: function () {
+
+            return false;
+
+        },
+        error: function () {
+
+            return false;
+
+
+        }
+    })
+
+    //console.log(a + " " + b + " " + c + " " + d);
+    return true;
+
+}
+
+// 소셜댓글 값리턴
+function commentResultProduct(a, b, c, d) {
+
+    var rtnVal = false;
+	
+	var imgName = "";
+	var shareList = "";
+	if ( a == "insert")	{
+		imgName = d.imageName;
+		shareList = d.shareList
+	}
+
+    jQuery.ajax({
+
+        url: "/ext/commentProduct_action.asp",
+        type: "post",
+        data: {
+            action : a,
+            result: b,
+            object : c,
+            contentNo : jQuery("#ProductNo").val(),
+						imgName : imgName,
+						shareList : shareList
+//		      contentCategory : contentCategory
+        },
+        success: function () {
+
+            return false;
+
+        },
+        error: function () {
+
+            return false;
+
+
+        }
+    })
+
+    //console.log(a + " " + b + " " + c + " " + d);
+    return true;
+
+}
+
+
+function cjTracking(orno) {
+	window.open('http://nexs.cjgls.com/web/detail.jsp?slipno='+orno,'cjTracking','toolbar=yes,location=no,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=600');
+}
+
+function hyundaiTracking(orno) {
+	window.open('http://www.hlc.co.kr/personalService/tracking/06/tracking_goods_result.jsp?sflag=01&InvNo='+orno,'hyundaiTracking','toolbar=yes,location=no,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=1024,height=800');
+}
+
+function hjTracking(orno) {
+	window.open('http://www.hanjin.co.kr/Delivery_html/inquiry/result_waybill.jsp?wbl_num='+orno,'cjTracking','toolbar=yes,location=no,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=1024,height=800');
+}
+
+function logenTracking(orno) {
+	window.open('http://www.ilogen.com/iLOGEN.Web.New/TRACE/TraceView.aspx?gubun=slipno&slipno='+orno,'logenTracking','toolbar=yes,location=no,directories=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=600');
+}
+
+function loginReq(){
+	top.location.href="/member/login.asp"
+}

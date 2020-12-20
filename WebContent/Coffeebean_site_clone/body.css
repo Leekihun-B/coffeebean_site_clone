@@ -1,0 +1,9 @@
+    /** 구역 정의 */
+
+    .boder {
+        background-color: white;
+        min-height: 500px;
+        width: 1900px;
+        margin: auto;
+        margin-top: 150px;
+    }

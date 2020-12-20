@@ -1,0 +1,65 @@
+(function(ssq){
+	var	struc={}, config={}, listener={};
+	ssq(document).ready(function(){ struc.init() });
+	function trace(a){ var b=""; for(var i=0;i<arguments.length;i++){if(i>0)b+=", ";b+=arguments[i];} try{console.log(b);}catch(e){}}
+	struc = {
+		init : function() {
+			struc.regist(); 
+			struc.pageMethod();
+			listener.start();
+		},
+		regist : function() {
+
+		},
+		pageMethod : function () {
+			cardPop();
+		}
+	};
+	listener = {
+		start : function(){
+			ssq(window).bind("resize", listener.resizePage); listener.resizePage();
+			ssq("a.scroll_buttom").on("click", function(e){ e.preventDefault(); goScroll(ssq(this).attr("href")); });
+			ssq("a[href=#]").on("click",function(e){
+				e.preventDefault();
+			})
+		},
+		resizePage : function(e) {
+		
+		}
+	};
+
+	function cardPop(){
+		var cardPopup = $('.card-popup');
+		cardPopup.hide();
+		$('#memberCard').click(function(e){
+			e.preventDefault();
+			cardPopup.show();
+			if($('.barcode_list li').length >= 3){
+				$('.barcode_list').slick({
+					infinite: true,
+					speed: 300,
+					centerMode: true,
+					variableWidth: true,
+					dots:true,
+					arrows:false,
+					slidesToShow: 2
+				});
+			}else{
+				$('.barcode_list').slick({
+					infinite: false,
+					speed: 300,
+					centerMode: true,
+					variableWidth: true,
+					dots:true,
+					arrows:false,
+					slidesToShow: 1
+				});			
+			}
+		})
+		$('.card-popup .btn-close').click(function(){
+			cardPopup.hide();	
+		})
+	}
+
+
+})(jQuery);

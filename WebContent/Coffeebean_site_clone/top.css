@@ -1,0 +1,202 @@
+    /** 구역 정의 */
+
+    .header {
+        background-color: rgb(238, 238, 238);
+        height: 140px;
+        width: 100%;
+        margin: -150px auto;
+        position: fixed;
+    }
+
+    /***************************/
+
+    /** 메뉴1번 */
+    .main_menu1 {
+        height: 40px;
+        width: 1300px;
+        margin: auto;
+
+        /*background-color: green;*/
+    }
+
+    /** 메뉴1 텍스트 박스 */
+    .main_menu1 .main_menu_ul1 {
+        display: block;
+        width: 505px;
+        height: auto;
+        margin-left: auto;
+        font-weight: bold;
+        font-size: 12px;
+
+        /*background: pink;*/
+    }
+
+    /** float마감처리 */
+    .main_menu1 .main_menu_ul1:after {
+        display: block;
+        content: '';
+        float: none;
+        clear: both;
+    }
+
+    /** li1 효과 */
+    .main_menu1 .main_menu_ul1 .li1 {
+        display: block;
+        float: left;
+        line-height: 40px;
+        padding-left: 15px;
+
+        /*background: #f0f;*/
+    }
+
+    /** li1_rog 효과 */
+    .main_menu1 .main_menu_ul1 .li1_rog {
+        display: block;
+        border-right: 1px dotted #d9d9d9;
+        height: 40px;
+        width: 50px;
+        float: left;
+        line-height: 40px;
+        padding: 0 15px;
+
+        /*background: #f5f5ff;*/
+    }
+
+    /** li1_img 효과 */
+    .main_menu1 .main_menu_ul1 .li1_img {
+        line-height: 0;
+        display: block;
+        height: 40px;
+    }
+
+    /***************************/
+    /** 메뉴2번 */
+
+    .main_menu2 {
+        height: 100px;
+        width: 100%;
+
+        background-color: white;
+    }
+
+    .main_menu2_1 {
+        display: block;
+        width: 1300px;
+        height: 100px;
+        margin: auto;
+        font-weight: bold;
+        /*background-color: #ccc;*/
+    }
+
+    /** 메뉴2 텍스트 박스 */
+    .main_menu2 .main_menu_ul2 {
+        display: block;
+        height: 100px;
+        width: auto;
+        margin: auto;
+        /*background: #f0f;*/
+    }
+
+    /** float마감처리 */
+    .main_menu2 .main_menu_ul2:after {
+        display: block;
+        content: '';
+        float: none;
+        clear: both;
+    }
+
+    /** 메뉴2 로고 이미지 */
+    .main_menu2 .main_menu_ul2 .rogo1 {
+        display: block;
+        float: left;
+        line-height: 0px;
+        height: 70px;
+        border-radius: 50px;
+        width: auto;
+        margin-left: 40px;
+        margin-top: 15px;
+
+        /*background: #f0f;*/
+    }
+
+    /** li2 효과 */
+
+    .main_menu2 .main_menu_ul2 .li2_1 {
+        display: block;
+        float: left;
+        line-height: 100px;
+        height: 100px;
+        width: 160px;
+        margin-left: 110px;
+        text-align: center;
+
+        /*background: red;*/
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_2 {
+        display: block;
+        float: left;
+        line-height: 100px;
+        height: 100px;
+        width: 160px;
+        text-align: center;
+
+        /*background: blue;*/
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_3 {
+        display: block;
+        float: left;
+        line-height: 100px;
+        height: 100px;
+        width: 110px;
+        text-align: center;
+
+        /*background: green;*/
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_4 {
+        display: block;
+        float: left;
+        line-height: 100px;
+        height: 100px;
+        width: 120px;
+        text-align: center;
+
+        /*background: orange;*/
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_5 {
+        display: block;
+        float: left;
+        line-height: 100px;
+        height: 100px;
+        width: 210px;
+        text-align: center;
+
+        /*background: yellow;*/
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_6 {
+        display: block;
+        float: left;
+        line-height: 100px;
+        height: 100px;
+        width: 90px;
+        text-align: center;
+
+        /*background: purple;*/
+    }
+
+    /** 검색 효과 */
+    .main_menu2 .main_menu_ul2 .search {
+        display: block;
+        float: left;
+        line-height: 120px;
+        height: 100px;
+        width: auto;
+        text-align: center;
+        margin-left: 150px;
+
+        /*background: silver;*/
+    }

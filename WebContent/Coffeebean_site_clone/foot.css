@@ -1,0 +1,136 @@
+    /** footer 구역 정의 */
+
+    .footer {
+        background-color: rgb(226, 226, 226);
+        height: 518px;
+        width: 100%;
+    }
+
+    /** 메뉴 리스트 */
+    .footer_1 {
+        margin: auto;
+        width: 1200px;
+        height: 318px;
+        /*background-color: red;*/
+    }
+
+    /** float 마감제 */
+    .footer_1:after {
+        float: none;
+        clear: both;
+        display: block;
+        content: '';
+    }
+
+    .footer_1 .menu_list1 {
+        width: 100px;
+        height: 250px;
+        padding-top: 60px;
+        float: left;
+
+        /*background-color: red;*/
+    }
+
+    .footer_1 .menu_list2 {
+        width: 140px;
+        height: 250px;
+        padding-top: 60px;
+        float: left;
+        margin-left: 100px;
+
+        /*background-color: blue;*/
+    }
+
+    .footer_1 .menu_list3 {
+        width: 60px;
+        height: 250px;
+        padding-top: 60px;
+        float: left;
+        margin-left: 100px;
+
+        /*background-color: green;*/
+    }
+
+    .footer_1 .menu_list4 {
+        width: 60px;
+        height: 250px;
+        padding-top: 60px;
+        float: left;
+        margin-left: 100px;
+
+        /*background-color: yellow;*/
+    }
+
+    .footer_1 .menu_list5 {
+        width: 150px;
+        height: 250px;
+        padding-top: 60px;
+        float: left;
+        margin-left: 100px;
+
+        /*background-color: purple;*/
+    }
+
+    .footer_1 .menu_list6 {
+        width: 80px;
+        height: 250px;
+        padding-top: 60px;
+        float: left;
+        margin-left: 100px;
+
+        /*background-color: silver;*/
+    }
+
+
+
+
+
+    /** copylight 및 infomation */
+
+    .footer_2 {
+        position: relative;
+        margin: auto;
+        width: 1200px;
+        height: 200px;
+        padding-top: 30px;
+        border-top: 1px solid #000;
+
+        /*background-color: blue;*/
+    }
+
+    /** SNS Link아이콘 */
+    .footer_2 .link1 {
+        position: absolute;
+        top: 30px;
+        right: 165px;
+        display: block;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .footer_2 .link2 {
+        position: absolute;
+        top: 30px;
+        right: 110px;
+        display: block;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .footer_2 .link3 {
+        position: absolute;
+        top: 30px;
+        right: 55px;
+        display: block;
+        height: 40px;
+        border-radius: 20px;
+    }
+
+    .footer_2 .link4 {
+        position: absolute;
+        top: 30px;
+        right: 0px;
+        display: block;
+        height: 40px;
+        border-radius: 20px;
+    }
