@@ -1,9 +1,74 @@
     /** 구역 정의 */
 
     .boder {
+        background-color: #0f0;
+        margin: auto;
+        padding-top: 140px;
+    }
+
+    /** 배너 구역 */
+    .boder .banner1 {
         background-color: white;
-        min-height: 500px;
+        width: auto;
+    }
+
+    .boder .banner2 {
+        background-color: white;
+        width: auto;
+    }
+
+    /** 배너1 효과 */
+    .banner1_1 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/메인상단배너_1.jpg");
+        height: 540px;
         width: 1900px;
         margin: auto;
-        margin-top: 150px;
+    }
+
+    .banner1_1 a {
+        display: block;
+        height: 540px;
+        width: 1900px;
+    }
+
+    /** 배너2 효과 */
+    .banner1_2 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/메인_222.jpg");
+        height: 400px;
+        width: 1900px;
+        margin: auto;
+    }
+
+    .banner1_2 a {
+        display: block;
+        height: 400px;
+        width: auto;
+    }
+
+    /** MD'S PICK 효과 */
+
+    .md_pick {
+        height: 300px;
+        width: auto;
+
+        background: black;
+    }
+
+    .md_pick ul {
+        display: block;
+        height: 300px;
+        width: 2400px;
+        margin: auto;
+    }
+
+    .md_pick ul:after {
+        float: none;
+        clear: both;
+        display: block;
+        content: '';
+    }
+
+    .md_pick li {
+        display: block;
+        float: left;
     }
