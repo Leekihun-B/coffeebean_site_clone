@@ -2,13 +2,25 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 저장시에 사용된 인코딩(파일의 저장형식) 값을 웹 브라우저에게 알려준다. - ANSI(euc-kr), UTF-8 -->
+    <meta charset="utf-8" />
+    <!-- IE의 호환성 보기 모드 금지 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 스마트 장치에서의 해상도 균일화 처리 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="top.css" />
     <link rel="stylesheet" type="text/css" href="body.css" />
     <link rel="stylesheet" type="text/css" href="foot.css" />
     <link rel="stylesheet" type="text/css" href="common.css" />
+    <!-- slick 효과-->
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+    <!-- slick 효과-->
+    <!-- homepage icon -->
     <link rel="shortcut icon" href="홈 _ COFFEE BEAN KOREA_files/coffeebeanrogo.png" />
+    <!-- homepage icon -->
     <title>홈 | COFFEE BEAN KOREA CLONE</title>
     <style type="text/css">
     </style>
@@ -55,16 +67,162 @@
             </a>
         </div>
         <div class="md_pick">
-            <ul>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11110023.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11110019.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11110020.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11100015.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11400003.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11400004.jpg" alt="" /> </a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11100004.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11100002.jpg" alt="" /></a></li>
-            </ul>
+            <h2>MD'S PICK</h2>
+            <div class="md_pick_1">
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11110023.jpg" alt="" />
+                        <div class="head">[1+1] 커피빈 드립백(디카페인) 5개입</div>
+                        <div class="md_pick_1_title">5,900원</div>
+                        <div class="sold_out">품절</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11110019.jpg" alt="" />
+                        <div class="head">[1+1] 커피빈 드립백(모카자바 블렌드) 5개입</div>
+                        <div class="price">5,900원</div>
+                        <div class="sold_out">품절</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11110020.jpg" alt="" />
+                        <div class="head">[1+1] 커피빈 드립백(콜롬비아 다크) 5개입</div>
+                        <div class="price">5,900원</div>
+                        <div class="sold_out">품절</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11100015.jpg" alt="" />
+                        <div class="head">[-20% OFF] 커피빈 헤이즐넛 라떼 파우치 (10개입)</div>
+                        <div style="text-decoration-line: line-through;">15,000원</div>
+                        <div class="price">12,000원</div>
+                        <div class="sold_out">품절</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/11400003.jpg" alt="" />
+                        <div class="head">[1+1] 초코시나몬 크래커</div>
+                        <div>초코시나몬 크래커</div>
+                        <div class="price">2,800원</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11400004.jpg" alt="" />
+                        <div class="head">[1+1] 얼그레이 크래커</div>
+                        <div>얼그레이 크래커</div>
+                        <div class="price">2,800원</div>
+                        <div class="sold_out">품절</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11100004.jpg" alt="" />
+                        <div class="head">커피빈 더블샷 라떼 30T</div>
+                        <div>커피빈 더블샷 라떼 (14.3g*30T)</div>
+                        <div class="price">14,000원</div>
+                    </a>
+                </div>
+                <div class="md_pick_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/11100002.jpg" alt="" />
+                        <div class="head">커피빈 카페 라떼 30T</div>
+                        <div>커피빈 카페 라떼 (14.3g*30T)</div>
+                        <div class="price">13,000원</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="what_new">
+            <h2>What's new</h2>
+            <div class="what_new_1">
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/what1.PNG" alt="" />
+                        <div class="md_pick_1_title">2020 12 Amazing Chrismas</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_연출샷_9.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 12 Black Cookie Cake</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_연출샷_8.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 12 Strawberry Cheese Baumkuchen</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_246.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 12 Pasta</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#"><img src="홈 _ COFFEE BEAN KOREA_files/PC_B_244.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 12 Happy Holidays To You</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_연출샷_6.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 11 Mexican Bulgogi Brrito</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_연출샷_4.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 11 Holiday MD</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_연출샷_2.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 11 Kahlua Espresso Martini</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_연출샷.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 11 Cookie Butter Drinks</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_242.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 11 Baton Sucre with Almond Chocolate</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_240.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 11 Holiday Tea</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_239.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 10 Matcha Red Bean Roll Cake</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_236.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 10 El Salvador Honey</div>
+                    </a>
+                </div>
+                <div class="what_new_1_box">
+                    <a href="#">
+                        <img src="홈 _ COFFEE BEAN KOREA_files/PC_B_232.jpg" alt="" />
+                        <div class="md_pick_1_title">2020 09 Black Dripper Set</div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="footer">
@@ -169,6 +327,8 @@
         </div>
     </div>
     <script src="http://code.jQuery.com/jQuery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="common.js"></script>
     <script type="text/javascript">
     </script>
 </body>

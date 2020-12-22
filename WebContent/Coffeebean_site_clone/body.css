@@ -48,27 +48,107 @@
     /** MD'S PICK 효과 */
 
     .md_pick {
-        height: 300px;
+        height: 700px;
         width: auto;
 
-        background: black;
+        background: white;
     }
 
-    .md_pick ul {
+    .md_pick h2 {
         display: block;
+        text-align: center;
+        color: rgb(207, 102, 104);
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .md_pick .md_pick_1 {
         height: 300px;
-        width: 2400px;
+        width: 1200px;
         margin: auto;
     }
 
-    .md_pick ul:after {
-        float: none;
-        clear: both;
-        display: block;
-        content: '';
+    .md_pick .md_pick_1 .md_pick_1_box {
+        width: auto;
+        height: 500px;
+        /*background-color: pink;*/
     }
 
-    .md_pick li {
+    .md_pick .md_pick_1 .md_pick_1_box a {
         display: block;
-        float: left;
+        width: auto;
+        height: 500px;
+    }
+
+    /** 텍스트 */
+    .md_pick .md_pick_1 div {
+        margin: auto;
+        text-align: center;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .md_pick .md_pick_1 .head {
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .md_pick .md_pick_1 .price {
+        color: rgb(207, 102, 104);
+    }
+
+    /** 품절 박스 */
+    .md_pick .md_pick_1 .sold_out {
+        border: 1px solid rgb(207, 102, 104);
+        width: 55px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 25px;
+        margin-top: 10px;
+        color: rgb(207, 102, 104);
+    }
+
+    /** What's new 효과 */
+
+    .what_new {
+        height: 760px;
+        width: auto;
+
+        background: white;
+    }
+
+    .what_new h2 {
+        display: block;
+        text-align: center;
+        color: rgb(207, 102, 104);
+        padding-bottom: 40px;
+    }
+
+    .what_new .what_new_1 {
+        height: 600px;
+        width: 1200px;
+        margin: auto;
+        /*background-color: pink;*/
+    }
+
+    .what_new .what_new_1 .what_new_1_box {
+        height: 600px;
+        width: 380px;
+        margin: 0 10px;
+        /*background-color: black;*/
+    }
+
+    .what_new .what_new_1 .what_new_1_box a {
+        display: block;
+        width: auto;
+        height: 600px;
+    }
+
+    /** text 효과 */
+    .what_new .what_new_1 .md_pick_1_title {
+        color: rgb(207, 102, 104);
+        display: block;
+        text-align: center;
+        margin-top: 25px;
+        font-weight: bold;
     }
