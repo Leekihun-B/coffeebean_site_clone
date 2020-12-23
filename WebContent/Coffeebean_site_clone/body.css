@@ -48,8 +48,10 @@
     /** MD'S PICK 효과 */
 
     .md_pick {
-        height: 700px;
+        height: 655px;
         width: auto;
+        position: relative;
+        z-index: 1;
 
         background: white;
     }
@@ -63,13 +65,13 @@
     }
 
     .md_pick .md_pick_1 {
-        height: 300px;
+        height: 500px;
         width: 1200px;
         margin: auto;
     }
 
     .md_pick .md_pick_1 .md_pick_1_box {
-        width: auto;
+        width: 300px;
         height: 500px;
         /*background-color: pink;*/
     }
@@ -113,6 +115,7 @@
     .what_new {
         height: 760px;
         width: auto;
+        padding-top: 60px;
 
         background: white;
     }
@@ -151,4 +154,50 @@
         text-align: center;
         margin-top: 25px;
         font-weight: bold;
+    }
+
+    /** slick dots 관련 효과 */
+
+    /* dots 위치 */
+    .slick-dots {
+        display: block;
+        position: relative;
+        left: 30px;
+    }
+
+    /** play pause button */
+    .button_box1 {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: auto;
+        margin-top: -20px;
+        padding-right: 100px;
+    }
+
+    .button_box1 .button_border {
+        margin: auto;
+        position: relative;
+        z-index: 10;
+        height: 20px;
+        width: 60px;
+        border-right: 1px solid rgb(238, 238, 238);
+    }
+
+    .button1-1 {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        background: url("홈 _ COFFEE BEAN KOREA_files/pause.PNG") -6px -7px;
+        border: 0;
+    }
+
+    .button1-2 {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        background: url("홈 _ COFFEE BEAN KOREA_files/play.PNG") -6px -7px;
+        border: 0;
     }
