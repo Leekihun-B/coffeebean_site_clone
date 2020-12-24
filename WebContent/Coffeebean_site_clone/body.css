@@ -1,7 +1,7 @@
     /** 구역 정의 */
 
     .boder {
-        background-color: #0f0;
+        background-color: white;
         margin: auto;
         padding-top: 140px;
     }
@@ -73,6 +73,7 @@
     .md_pick .md_pick_1 .md_pick_1_box {
         width: 300px;
         height: 500px;
+        position: relative;
         /*background-color: pink;*/
     }
 
@@ -80,6 +81,183 @@
         display: block;
         width: auto;
         height: 500px;
+    }
+
+    /** QuickView box*/
+    .md_pick_1 .md_pick_1_box .md_pick_1_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_1_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_2_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_2_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_3_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_3_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_4_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_4_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_5_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_5_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_6_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_6_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_7_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_7_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_8_box_quick {
+        background-color: rgb(243, 130, 0);
+        position: absolute;
+        height: 40px;
+        width: 200px;
+        top: 200px;
+        left: 50px;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 40px;
+
+        display: none;
+    }
+
+    .md_pick_1 .md_pick_1_box .md_pick_8_box_quick a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: white;
     }
 
     /** 텍스트 */
@@ -113,9 +291,11 @@
     /** What's new 효과 */
 
     .what_new {
-        height: 760px;
+        height: 697px;
         width: auto;
         padding-top: 60px;
+        position: relative;
+        z-index: 1;
 
         background: white;
     }
@@ -147,6 +327,11 @@
         height: 600px;
     }
 
+    .what_new .what_new_1 .what_new_1_box a:hover {
+        filter: opacity(0.5);
+        -webkit-filter: opacity(0.7);
+    }
+
     /** text 효과 */
     .what_new .what_new_1 .md_pick_1_title {
         color: rgb(207, 102, 104);
@@ -165,7 +350,7 @@
         left: 30px;
     }
 
-    /** play pause button */
+    /** MD'S PICK slick - play pause button */
     .button_box1 {
         display: block;
         position: relative;
@@ -175,7 +360,7 @@
         padding-right: 100px;
     }
 
-    .button_box1 .button_border {
+    .button_box1 .button_border1 {
         margin: auto;
         position: relative;
         z-index: 10;
@@ -189,7 +374,8 @@
         height: 20px;
         width: 20px;
         margin: auto;
-        background: url("홈 _ COFFEE BEAN KOREA_files/pause.PNG") -6px -7px;
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/pause.PNG");
+        background-position: -6px -7px;
         border: 0;
     }
 
@@ -198,6 +384,203 @@
         height: 20px;
         width: 20px;
         margin: auto;
-        background: url("홈 _ COFFEE BEAN KOREA_files/play.PNG") -6px -7px;
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/play.PNG");
+        background-position: -6px -7px;
         border: 0;
+    }
+
+    /** What's new slick - play pause button */
+    .button_box2 {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: auto;
+        margin-top: -20px;
+        padding-right: 190px;
+    }
+
+    .button_box2 .button_border2 {
+        margin: auto;
+        position: relative;
+        z-index: 10;
+        height: 20px;
+        width: 60px;
+        border-right: 1px solid rgb(238, 238, 238);
+    }
+
+    .button2-1 {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/pause.PNG");
+        background-position: -6px -7px;
+        border: 0;
+    }
+
+    .button2-2 {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: auto;
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/play.PNG");
+        background-position: -6px -7px;
+        border: 0;
+    }
+
+    /** instagram 영역 */
+
+    .instagram {
+        background-color: rgb(124, 81, 161);
+        margin-top: 70px;
+        height: 600px;
+        width: 100%;
+    }
+
+    .instagram .instagram_depth1 {
+        /*background-color: pink;*/
+        height: 600px;
+        width: 1200px;
+        margin: auto;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-1 {
+        /*background-color: red;*/
+        height: 90px;
+        width: 1200px;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 {
+        /*background-color: blue;*/
+        height: 400px;
+        width: 1200px;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-3 {
+        /*background-color: purple;*/
+        height: 80px;
+        width: 1200px;
+        padding-top: 30px;
+    }
+
+    /** instagram_text 폰트 */
+
+    .instagram .instagram_depth1 .instagram_depth1-1 .instagram_text {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        line-height: 85px;
+    }
+
+
+    /** instagram_depth1-2 list 크기 및 정렬*/
+    .instagram .instagram_depth1 .instagram_depth1-2 ul li a div {
+        height: 200px;
+        width: 200px;
+        float: left;
+        background-color: green;
+        transition: all 0.3s;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 ul li a div:hover {
+        transform: scale(1.1, 1.1);
+        filter: opacity(0.5);
+        -webkit-filter: opacity(0.7);
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 ul li a {
+        display: block;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        float: left;
+    }
+
+
+    /** float 마감처리 */
+    .instagram .instagram_depth1 .instagram_depth1-2:after {
+        float: none;
+        clear: both;
+        display: block;
+        content: '';
+    }
+
+    /** list 이미지 및 크기 */
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list1 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/130101247_2744013042531446_3764029243401204484_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list2 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/130951094_210939557203551_7074633228466325098_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list3 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/130441308_240615210791993_2302694170007949454_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list4 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/130302973_428524938316250_533462499646697156_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list5 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129736155_784098902142781_5566395808461736743_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list6 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129763337_774500639947242_4546392342896910078_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list7 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129678803_129835732276244_2836239738137691482_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list8 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129490356_750419778898214_3754077559558928455_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list9 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129760552_112169254072507_6466424348164764629_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list10 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129732253_662061374463465_662757954879180860_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list11 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/129730098_820250848815396_2141858931914392818_n.jpg");
+        background-size: cover;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-2 .instagram_list12 {
+        background-image: url("홈 _ COFFEE BEAN KOREA_files/128995314_3522536267859471_6627507685254988664_n.jpg");
+        background-size: cover;
+    }
+
+    /** instagram link box 효과 */
+    .instagram .instagram_depth1 .instagram_depth1-3 .instagram_link {
+        background-color: rgb(243, 130, 0);
+        height: 40px;
+        width: 400px;
+        margin: auto;
+        text-align: center;
+        font-weight: bold;
+        line-height: 40px;
+    }
+
+    .instagram .instagram_depth1 .instagram_depth1-3 .instagram_link a {
+        color: white;
+        display: block;
+        width: auto;
+        height: auto;
     }
