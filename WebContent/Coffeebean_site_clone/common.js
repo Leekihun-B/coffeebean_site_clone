@@ -130,4 +130,55 @@ $(function() {
     });
 
 
+    /** 커피빈이미지 클릭시 로그인 회원가입 box 생성, 제거 및  boder padding-top 변경 */
+    $(".li1_img").click(function() {
+        $(".main_login").slideToggle(200);
+        $(".main_login").toggleClass("main_login1");
+        $(".boder").toggleClass("boder1");
+        $(".li1_img").toggleClass("li1_img1");
+    });
+
+    /** 메뉴 hover 기능 구현 */
+    $(".li2_1").hover(function() {
+        $(".li2_a").toggleClass("li2_a_1");
+        $(".li2_1_box").fadeToggle(200);
+        $(".li2_1_box").toggleClass("li2_1_box1");
+    });
+
+    $(".li2_2").hover(function() {
+        $(".li2_b").toggleClass("li2_b_1");
+        $(".li2_2_box").fadeToggle(200);
+        $(".li2_2_box").toggleClass("li2_2_box1");
+    });
+
+    $(".li2_3").hover(function() {
+        $(".li2_c").toggleClass("li2_c_1");
+        $(".li2_3_box").fadeToggle(200);
+        $(".li2_3_box").toggleClass("li2_3_box1");
+    });
+
+    $(".li2_4").hover(function() {
+        $(".li2_d").toggleClass("li2_d_1");
+        $(".li2_4_box").fadeToggle(200);
+        $(".li2_4_box").toggleClass("li2_4_box1");
+    });
+
+    $(".li2_5").hover(function() {
+        $(".li2_e").toggleClass("li2_e_1");
+        $(".li2_5_box").fadeToggle(200);
+        $(".li2_5_box").toggleClass("li2_5_box1");
+    });
+
+    $(".li2_6").hover(function() {
+        $(".li2_f").toggleClass("li2_f_1");
+        $(".li2_6_box").fadeToggle(200);
+        $(".li2_6_box").toggleClass("li2_6_box1");
+    });
+
+    $(".search_icon").click(function() {
+        $(".search_place").slideToggle(300);
+        $(".search_icon").toggleClass("search_icon1");
+        $(".search_place").toggleClass("search_place1");
+    });
+
 });

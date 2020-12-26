@@ -2,12 +2,82 @@
 
     .header {
         background-color: rgb(238, 238, 238);
-        height: 140px;
+        min-height: 140px;
         width: 100%;
         margin: auto;
         position: fixed;
         border-bottom: 1px solid rgb(238, 238, 238);
-        z-index: 10;
+        z-index: 100;
+    }
+
+    /***************************/
+
+    /** main_login box 영역 */
+    .main_login {
+        width: 100%;
+        height: 120px;
+        display: none;
+
+        background-color: rgb(47, 28, 17);
+    }
+
+    .main_login1 {
+        width: 100%;
+        height: 120px;
+        display: block;
+        animation-duration: 3s;
+
+        background-color: rgb(47, 28, 17);
+    }
+
+    .main_login .main_login_box {
+        width: 1300px;
+        height: 120px;
+        line-height: 120px;
+        margin: auto;
+        color: white;
+        font-size: 19px;
+        text-align: center;
+
+        background-color: rgb(47, 28, 17);
+    }
+
+    .main_login .main_login_box .space_box {
+        display: inline-block;
+        width: 250px;
+        height: 40px;
+    }
+
+    /** 로그인, 회원가입 링크 효과 */
+    .main_login .main_login_box .login_button {
+        display: inline-block;
+        width: 180px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 13px;
+        font-weight: bold;
+        color: rgb(47, 28, 17);
+        border: 1px solid white;
+
+        background-color: white;
+    }
+
+    .main_login .main_login_box .member_button {
+        display: inline-block;
+        width: 180px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+        border: 1px solid white;
+        margin-left: 15px;
+
+        background-color: rgb(47, 28, 17);
+
+
     }
 
     /***************************/
@@ -66,9 +136,19 @@
 
     /** li1_img 효과 */
     .main_menu1 .main_menu_ul1 .li1_img {
-        line-height: 0;
         display: block;
+        margin-left: 20px;
         height: 40px;
+        width: 40px;
+        background: url("홈 _ COFFEE BEAN KOREA_files/coffeebeanimg.PNG") no-repeat;
+    }
+
+    .main_menu1 .main_menu_ul1 .li1_img1 {
+        display: block;
+        margin-left: 20px;
+        height: 40px;
+        width: 40px;
+        background: url("홈 _ COFFEE BEAN KOREA_files/coffeebeanimg_exit.PNG") no-repeat;
     }
 
     /***************************/
@@ -201,4 +281,550 @@
         margin-left: 150px;
 
         /*background: silver;*/
+    }
+
+    /** 메뉴 hover 기능에 사용될 미지정 css */
+
+    .main_menu2 .main_menu_ul2 .li2_1 .li2_a {
+        display: block;
+        width: auto;
+        height: auto;
+        color: black;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_1 .li2_a_1 {
+        display: block;
+        width: auto;
+        height: auto;
+        color: orange;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_2 .li2_b {
+        display: block;
+        width: auto;
+        height: auto;
+        color: black;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_2 .li2_b_1 {
+        display: block;
+        width: auto;
+        height: auto;
+        color: orange;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_3 .li2_c {
+        display: block;
+        width: auto;
+        height: auto;
+        color: black;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_3 .li2_c_1 {
+        display: block;
+        width: auto;
+        height: auto;
+        color: orange;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_4 .li2_d {
+        display: block;
+        width: auto;
+        height: auto;
+        color: black;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_4 .li2_d_1 {
+        display: block;
+        width: auto;
+        height: auto;
+        color: orange;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_5 .li2_e {
+        display: block;
+        width: auto;
+        height: auto;
+        color: black;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_5 .li2_e_1 {
+        display: block;
+        width: auto;
+        height: auto;
+        color: orange;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_6 .li2_f {
+        display: block;
+        width: auto;
+        height: auto;
+        color: black;
+    }
+
+    .main_menu2 .main_menu_ul2 .li2_6 .li2_f_1 {
+        display: block;
+        width: auto;
+        height: auto;
+        color: orange;
+    }
+
+    /** 메뉴 hover 하면 생성되는 div 속성 */
+
+    /* li2_1_box */
+    .li2_1_box {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        width: 1250px;
+        height: 420px;
+        padding: 30px 30px;
+        position: relative;
+        z-index: 100;
+        left: -230px;
+    }
+
+    .li2_1_box1 {
+        display: block;
+        background-color: rgb(238, 238, 238);
+        width: 1250px;
+        height: 420px;
+        padding: 30px 30px;
+        position: relative;
+        z-index: 100;
+        left: -230px;
+    }
+
+    .li2_1_box:after {
+        display: block;
+        float: none;
+        clear: both;
+        content: '';
+    }
+
+    .li2_1_box .menu1 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: red;*/
+    }
+
+    .li2_1_box .menu2 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: blue;*/
+    }
+
+    .li2_1_box .menu3 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: green;*/
+    }
+
+    .li2_1_box .menu4 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: yellow;*/
+    }
+
+    .li2_1_box .menu5 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: pink;*/
+    }
+
+    .li2_1_box .menu6 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: white;*/
+    }
+
+    .li2_1_box .menu7 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: purple;*/
+    }
+
+    .li2_1_box .menu8 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: orange;*/
+    }
+
+    /* li2_2_box */
+    .li2_2_box {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        width: 600px;
+        height: 200px;
+        padding: 30px 30px;
+        position: relative;
+        z-index: 100;
+        left: -50px;
+    }
+
+    .li2_2_box1 {
+        display: block;
+        background-color: rgb(238, 238, 238);
+        width: 600px;
+        height: 200px;
+        padding: 30px 30px;
+        position: relative;
+        z-index: 100;
+        left: -50px;
+    }
+
+    .li2_2_box:after {
+        display: block;
+        float: none;
+        clear: both;
+        content: '';
+    }
+
+    .li2_2_box .menu1 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: red;*/
+    }
+
+    .li2_2_box .menu2 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: blue;*/
+    }
+
+    /* li2_3_box */
+    .li2_3_box {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        width: 1000px;
+        height: 340px;
+        padding: 30px 30px;
+        position: relative;
+        z-index: 100;
+        left: -80px;
+    }
+
+    .li2_3_box1 {
+        display: block;
+        background-color: rgb(238, 238, 238);
+        width: 1000px;
+        height: 340px;
+        padding: 30px 30px;
+        position: relative;
+        z-index: 100;
+        left: -80px;
+    }
+
+    .li2_3_box:after {
+        display: block;
+        float: none;
+        clear: both;
+        content: '';
+    }
+
+    .li2_3_box .menu1 {
+        float: left;
+        width: 300px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: red;*/
+    }
+
+    .li2_3_box .menu2 {
+        float: left;
+        width: 200px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: blue;*/
+    }
+
+    .li2_3_box .menu3 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: green;*/
+    }
+
+    .li2_3_box .menu4 {
+        float: left;
+        width: 250px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: yellow;*/
+    }
+
+    /* li2_4_box */
+    .li2_4_box {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        width: 140px;
+        height: 60px;
+        padding: 40px 40px;
+        position: relative;
+        z-index: 100;
+        left: -10px;
+    }
+
+    .li2_4_box1 {
+        display: block;
+        background-color: rgb(238, 238, 238);
+        width: 140px;
+        height: 60px;
+        padding: 40px 40px;
+        position: relative;
+        z-index: 100;
+        left: -10px;
+    }
+
+    .li2_4_box:after {
+        display: block;
+        float: none;
+        clear: both;
+        content: '';
+    }
+
+    .li2_4_box .menu1 {
+        float: left;
+        width: 300px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: red;*/
+    }
+
+    /* li2_5_box */
+    .li2_5_box {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        width: 1200px;
+        height: 170px;
+        padding: 40px 40px;
+        position: relative;
+        z-index: 100;
+        left: -550px;
+    }
+
+    .li2_5_box1 {
+        display: block;
+        background-color: rgb(238, 238, 238);
+        width: 1200px;
+        height: 170px;
+        padding: 40px 40px;
+        position: relative;
+        z-index: 100;
+        left: -550px;
+    }
+
+    .li2_5_box:after {
+        display: block;
+        float: none;
+        clear: both;
+        content: '';
+    }
+
+    .li2_5_box .menu1 {
+        float: left;
+        width: 225px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: red;*/
+    }
+
+    .li2_5_box .menu2 {
+        float: left;
+        width: 200px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: blue;*/
+    }
+
+    .li2_5_box .menu3 {
+        float: left;
+        width: 320px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: green;*/
+    }
+
+    .li2_5_box .menu4 {
+        float: left;
+        width: 230px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: yellow;*/
+    }
+
+    .li2_5_box .menu5 {
+        float: left;
+        width: 200px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: pink;*/
+    }
+
+    /* li2_6_box */
+    .li2_6_box {
+        display: none;
+        background-color: rgb(238, 238, 238);
+        width: 160px;
+        height: 230px;
+        padding: 60px 70px;
+        position: relative;
+        z-index: 100;
+        left: -20px;
+    }
+
+    .li2_6_box1 {
+        display: block;
+        background-color: rgb(238, 238, 238);
+        width: 160px;
+        height: 230px;
+        padding: 60px 70px;
+        position: relative;
+        z-index: 100;
+        left: -20px;
+    }
+
+    .li2_6_box:after {
+        display: block;
+        float: none;
+        clear: both;
+        content: '';
+    }
+
+    .li2_6_box .menu1 {
+        float: left;
+        width: 225px;
+        height: auto;
+        line-height: 30px;
+        text-align: left;
+
+        /*background-color: red;*/
+    }
+
+    /* search_button */
+    .search_box {
+        float: left;
+        margin: auto;
+        margin-left: 130px;
+        width: 80px;
+        height: 80px;
+        padding-top: 20px;
+
+        /*background-color: red;*/
+    }
+
+    .search_icon {
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+        background: url("홈 _ COFFEE BEAN KOREA_files/search.PNG") no-repeat;
+    }
+
+    /**************/
+    .search_icon1 {
+        width: 40px;
+        height: 40px;
+        margin: 10px auto;
+        background: url("홈 _ COFFEE BEAN KOREA_files/search_after_x.PNG") no-repeat;
+    }
+
+    .search_place {
+        display: none;
+        width: 1280px;
+        height: 75px;
+        margin-left: -1200px;
+        margin-top: 31px;
+        background-color: rgb(238, 238, 238);
+    }
+
+    /**************/
+    .search_place1 {
+        display: block;
+        width: 1280px;
+        height: 75px;
+        margin-left: -1200px;
+        margin-top: 31px;
+        background-color: rgb(238, 238, 238);
+    }
+
+    .input_search {
+        display: inline-block;
+        height: 30px;
+        width: 1180px;
+        margin-top: 20px;
+        margin-left: 20px;
+        float: left;
+        background-color: rgb(238, 238, 238);
+        border: none;
+    }
+
+    .search_after {
+        display: block;
+        height: 40px;
+        width: 40px;
+        margin-top: 20px;
+        margin-left: 15px;
+        float: left;
+
+        background: url("홈 _ COFFEE BEAN KOREA_files/search_after.PNG") no-repeat;
     }

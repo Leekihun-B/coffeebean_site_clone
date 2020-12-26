@@ -6,6 +6,12 @@
         padding-top: 140px;
     }
 
+    .boder1 {
+        background-color: white;
+        margin: auto;
+        padding-top: 260px;
+    }
+
     /** 배너 구역 */
     .boder .banner1 {
         background-color: white;
